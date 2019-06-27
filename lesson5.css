@@ -5,8 +5,15 @@ body {
     background: #990000;
 }
 article {
+    display: flex;
+    flex-direction: column;
     background: #ffffe6;
     padding: 2%;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 h1 {
     font-family: 'Fontdiner Swanky', cursive;
@@ -30,7 +37,7 @@ a {
 }
 img {
     max-width: 300px;
-    margin-left: calc(50% - 150px);
+    /* margin-left: calc(50% - 150px); */
 }
 header {
     margin-bottom: 10px;
@@ -48,4 +55,130 @@ section {
     padding: 5%;
     border: 2px solid #990000;
     clear: both;
+}
+
+/* ===== Media Queries ===== */
+/* Mobile */
+@media (max-width: 600px) {
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: #ffffe6;
+    }
+    article {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+    }
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    img {
+        max-width: 150px;
+    }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 768px) {
+    article {
+        display: flex;
+        flex-flow: row wrap;    
+    }
+    header {
+        width: 100%;
+    }
+    .content-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    #sidebar {
+        display: flex;
+
+    }
+    #main {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+    #resources {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        margin: 5px 5px 5px 0;
+    }
+    #resources img {
+        max-width: 200px;
+        margin: 0;
+    }
+    #pirate-fun {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        margin: 5px 0 5px 5px;
+    }
+    #pirate-fun img {
+        max-width: 200px;
+        margin: 0;
+    }
+    footer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* Desktops */
+@media (min-width: 769px) {
+    article {
+        display: flex;
+        flex-flow: column;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    header {
+        display: flex;
+        flex-direction: row;
+        margin: 0 2%;
+    }
+    .content-wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+    #sidebar {
+        display: flex;
+        width: 100%;
+    }
+    section {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        padding: 25px;
+    }
+    #main {
+        display: flex;
+        flex-grow: 1;
+        margin: 1%;
+    }
+    #resources {
+        display: flex;
+        max-width: 300px;
+        /* flex-shrink: 1; */
+        margin-right: 10px;
+    }
+    #resources img {
+        max-width: 100px;
+    }
+    #pirate-fun {
+        display: flex;
+        max-width: 300px;
+        /* flex-shrink: 1; */
+    }
+    #pirate-fun img {
+        max-width: 100px;
+    }
 }
